@@ -1,0 +1,23 @@
+HTTP_Socket.class : HTTP_Socket.java 
+	javac HTTP_Socket.java
+
+Parser.class : Parser.java
+	javac Parser.java
+
+MakeSummary.class : MakeSummary.java
+	javac MakeSummary.java
+
+Webpage.class : Webpage.java
+	javac Webpage.java
+
+run : HTTP_Socket.class
+	java HTTP_Socket $(URL)
+	#e.g make run URL=http://3310exp.hopto.org:9780/
+	
+clean :
+	rm HTTP_Socket.class
+	rm Parser.class
+	rm MakeSummary.class
+	rm Webpage.class
+	rm SortByContentSize.class
+	rm SortByDate.class
